@@ -2,10 +2,10 @@
 
 ## The steps of this project, which each will be described in greater detail, are as follows:
 ### Step 1. Develop a SVM with over 90% accuracy to test Snapchat app store data.
-### researched model libraries, created model based upon ChatGPT, manually wrote and had ChatGPT auto generate sample data, got it up to 98% accuracy
+#### researched model libraries, created model based upon ChatGPT, manually wrote and had ChatGPT auto generate sample data, got it up to 98% accuracy
 
 ### Step 2. Pull real reviews on Snapchat from the Google Play Store.
-### used Google play instead of app store, pulled 100 reviews and stored in Python list
+#### used Google play instead of app store, pulled 100 reviews and stored in Python list
 
 ### Step 3. Run the SVM on the set of Snapchat reviews and create a list of those that are actionable. 
 
