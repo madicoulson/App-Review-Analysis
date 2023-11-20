@@ -125,7 +125,29 @@ reviews = [
     "I love the sleek design of the app. It's visually appealing.",
     "There's a bug causing data loss. Please implement better error handling.",
     "Customer support is unresponsive. Improve the service for better user experience.",
-    "The app is worth the price. It has all the features I need for my tasks."
+    "The app is worth the price. It has all the features I need for my tasks.",
+    
+    "This app is incredibly useful. It helps me stay organized and productive.",
+    "The app interface is intuitive and user-friendly. I love the design!",
+    "I encountered a minor bug, but the customer support was quick to address and resolve it.",
+    "The latest update brought some exciting features. I'm impressed with the improvements.",
+    "The app crashed once, but overall, it's been a reliable tool for my daily tasks.",
+    "I appreciate the affordable pricing. This app offers great value for the money.",
+    "The app's dark mode is a game-changer. It's easy on the eyes during nighttime use.",
+    "I recommend this app to anyone looking for a reliable and feature-packed solution.",
+    "The app's security measures make me feel confident about using it for sensitive tasks.",
+    "I've been using this app for months, and it has become an essential part of my routine.",
+    
+    "The app's user interface could use some improvement. It feels a bit outdated.",
+    "I wish there were more customization options for the app's appearance.",
+    "The app occasionally lags, especially when dealing with large files. Needs optimization.",
+    "There is a security vulnerability that the developers need to address promptly.",
+    "I encountered a bug that caused some data loss. Implementing better error handling is crucial.",
+    "The app's performance on my device improved significantly after the recent update.",
+    "The app's cost is justified by the quality and variety of features it offers.",
+    "I like the simplicity of the app, but it could benefit from additional functionalities.",
+    "The app's design is clean and modern. It stands out among other similar applications.",
+    "The app crashes on startup, making it frustrating to use. Immediate attention is needed."
 ]
 
 labels = [0, 1, 1, 0, 0, 0, 1, 1, 1, 0,  
@@ -138,7 +160,9 @@ labels = [0, 1, 1, 0, 0, 0, 1, 1, 1, 0,
           1, 1, 0, 0, 0, 1, 0, 1, 0, 0,
           0, 1, 0, 1, 0, 1, 1, 1, 0, 1,
           1, 0, 1, 1, 0, 1, 0, 0, 1, 1,
-          1, 0, 1, 1, 0, 1, 0, 1, 0, 0]  
+          1, 0, 1, 1, 0, 1, 0, 1, 0, 0,
+          0, 0, 1, 0, 0, 0, 0, 0, 1, 0,
+          1, 1, 0, 1, 1, 0, 0, 1, 0, 1]  
 
 # Convert text data to TF-IDF features
 tfidf_vectorizer = TfidfVectorizer(max_features=10000)  # You can adjust the number of features
@@ -238,8 +262,14 @@ accuracy = accuracy_score(new_reviews_labels, predicted_labels)
 actionable_labels = {0: 'Not Actionable', 1: 'Actionable'}
 predicted_labels = [actionable_labels[pred] for pred in predicted_labels]
 
-# Display the predictions and accuracy
-for review, true_label, pred_label in zip(new_reviews, new_reviews_labels, predicted_labels):
-    print(f"Review: {review}\nTrue Label: {actionable_labels[true_label]}\nPredicted Label: {pred_label}\n")
+# Display the predictions and count the number of actionable reviews
+num_actionable_reviews = 0
+for review, label in zip(new_reviews, predicted_labels):
+    print(f"Review: {review}\nPredicted Label: {label}\n")
+    if label == 'Actionable':
+        num_actionable_reviews += 1
+
+# Output the number of actionable reviews
+print(f"Number of Actionable Reviews: {num_actionable_reviews} out of {len(new_reviews)}")
 
 print(f"Accuracy: {accuracy * 100:.2f}%")
