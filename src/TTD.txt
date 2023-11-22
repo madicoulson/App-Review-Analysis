@@ -1,0 +1,5 @@
+1. make speed data more accurate, add more reviews
+2. add at least 100 more reviews for crash SVM
+3. Fix printing number of crash reviews in crash SVM
+4. Implement UI/UX SVM
+5. Implement security SVM
