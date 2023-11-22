@@ -147,8 +147,75 @@ reviews = [
     "The app's cost is justified by the quality and variety of features it offers.",
     "I like the simplicity of the app, but it could benefit from additional functionalities.",
     "The app's design is clean and modern. It stands out among other similar applications.",
-    "The app crashes on startup, making it frustrating to use. Immediate attention is needed."
+    "The app crashes on startup, making it frustrating to use. Immediate attention is needed.",
+    
+    "The app's user interface is outdated. Consider a modern redesign for better usability.",
+    "I encountered a bug causing data loss. Please implement better error handling.",
+    "This app is a lifesaver! It has streamlined my daily tasks.",
+    "The latest update made the app slower on my device. Improve the performance.",
+    "The app's dark mode is a game-changer. It's easy on the eyes during nighttime use.",
+    "I wish there were more customization options for the app's appearance.",
+    "The app occasionally lags, especially when dealing with large files. Needs optimization.",
+    "There is a security vulnerability that the developers need to address promptly.",
+    "I appreciate the affordable pricing. This app offers great value for the money.",
+    "The app's performance on my device improved significantly after the recent update.",
+    
+    "This app has a sleek design, but it lacks essential features. Consider adding more functionalities.",
+    "I'm impressed with the app's intuitive user interface. It makes navigation a breeze.",
+    "The app crashes frequently, making it frustrating to use. Please fix this issue promptly.",
+    "I love the simplicity of this app. It does what it's supposed to without unnecessary complications.",
+    "There's a security flaw in the app. Strengthen the encryption to ensure user data is protected.",
+    "The app is a bit pricey, but the premium features justify the cost.",
+    "I encountered a bug that caused data duplication. Implement a fix to prevent this issue.",
+    "The app's customer support is unresponsive. Improve communication for a better user experience.",
+    "I use this app occasionally, and it meets my needs effectively.",
+    "The app's performance is inconsistent. It needs optimization for smoother usage.",
+    
+    "The app crashes on startup. This issue needs immediate attention.",
+    "This app is a must-have for productivity. It simplifies my workflow seamlessly.",
+    "Decent app overall, but the customer support is lacking in responsiveness.",
+    "I encountered a security vulnerability. Implement stronger measures for user data protection.",
+    "The latest update introduced new features, enhancing the overall functionality.",
+    "The app's interface is confusing. Consider a redesign for better user experience.",
+    "I regret purchasing this app. It doesn't live up to its advertised capabilities.",
+    "The app's speed is impressive. It responds quickly to user commands.",
+    "The subscription cost is too high for the limited features provided.",
+    "I recommend this app to everyone. It's user-friendly and feature-packed.",
+    
+    "The app frequently freezes, causing a frustrating user experience. Optimize for better performance.",
+    "I encountered a bug that caused app crashes. Urgent attention is needed to resolve this issue.",
+    "This app is a game-changer. It offers unique features that set it apart from other applications.",
+    "The UI design is visually appealing, but the lack of customization options is a drawback.",
+    "The app's cost is justified by its robust security features. I feel confident using it for sensitive tasks.",
+    "The app is user-friendly, but occasional lags hinder the overall experience. Optimize for smoother usage.",
+    "I've been a loyal user for years. The app consistently meets my expectations and needs.",
+    "This app is not worth the price. It lacks essential features and functionality.",
+    "The latest update brought some exciting changes, but it also introduced new bugs. Please fix promptly.",
+    "The app's customer support is excellent. Quick responses and effective solutions to user concerns.",
+    
+    "The app's recent update significantly improved its functionality. Kudos to the development team!",
+    "This app has become an indispensable part of my daily routine. Highly recommended.",
+    "The app's interface is confusing, and the lack of a tutorial makes it challenging for new users.",
+    "I encountered a security flaw while using this app. Strengthen encryption to protect user data.",
+    "The app crashes randomly, disrupting the user experience. Investigate and fix this issue urgently.",
+    "I appreciate the regular updates. It shows the developers are committed to enhancing the app.",
+    "This app is overpriced for the features it offers. Consider adjusting the pricing structure.",
+    "The user interface is outdated and could use a modern redesign for a more polished look.",
+    "The app's speed is impressive, providing a seamless and responsive user experience.",
+    "I've had no issues with this app. It's reliable, and the simplicity is perfect for my needs.",
+    
+    "The app's recent updates have introduced more bugs. It needs thorough testing before releases.",
+    "I've encountered a few glitches, but overall, the app is reliable for my daily tasks.",
+    "The app's design is sleek, but it lacks a dark mode option. Consider adding this feature.",
+    "I've had issues with data synchronization across devices. Improve data syncing functionality.",
+    "This app is a waste of time. It lacks basic features and doesn't fulfill its promises.",
+    "The app's customer support is outstanding. They respond promptly and resolve issues efficiently.",
+    "The subscription cost is justified by the app's premium features. It's worth the investment.",
+    "I use this app for work, and it has significantly boosted my productivity. Highly recommended.",
+    "The app's security features are top-notch. I feel confident storing sensitive information.",
+    "The app frequently crashes, especially when multitasking. Address this issue for better stability."
 ]
+
 
 labels = [0, 1, 1, 0, 0, 0, 1, 1, 1, 0,  
           0, 0, 0, 1, 0, 0, 1, 0, 1, 0,
@@ -162,7 +229,13 @@ labels = [0, 1, 1, 0, 0, 0, 1, 1, 1, 0,
           1, 0, 1, 1, 0, 1, 0, 0, 1, 1,
           1, 0, 1, 1, 0, 1, 0, 1, 0, 0,
           0, 0, 1, 0, 0, 0, 0, 0, 1, 0,
-          1, 1, 0, 1, 1, 0, 0, 1, 0, 1]  
+          1, 1, 0, 1, 1, 0, 0, 1, 0, 1,
+          1, 1, 0, 1, 0, 1, 1, 1, 0, 0,
+          1, 1, 1, 0, 1, 0, 1, 0, 0, 1,
+          1, 0, 0, 1, 1, 1, 0, 1, 0, 0,
+          1, 1, 0, 1, 1, 1, 0, 1, 1, 0,
+          1, 0, 1, 1, 1, 0, 0, 1, 1, 0,
+          1, 0, 1, 1, 0, 0, 0, 0, 1, 1]    
 
 # Convert text data to TF-IDF features
 tfidf_vectorizer = TfidfVectorizer(max_features=10000)  # You can adjust the number of features
@@ -264,7 +337,7 @@ new_reviews = [
     
     "The app was great before the new updates, since the new 3D bitmojis the app doesn't look great nor unique it's basic and annoying and the streaks are getting lost even though we send before the 24-hours max and you have to be subscribed to save them or restore them which is annoying, please bring back the old bitmojis back",
     "HAS WAY TO MUCH ADS. Each time I'm watching Snapchat I get atleats 1 minute each video and get another ad. It's so frustrating. BUT NOW. They added a new feature that makes your avatar look realistic it's so ugly please change it back to normal I hate it and I wanna delete this app",
-    "It makes me want to burn myself when I go to something awesome post on my story all day like a bunch of videos saving none planning to save them later by clicking save story so it would save them all in order but instead ruins the videos making them not synced with the sound and extremely laggy video thank you for ruining my attempt at saving memories I will never be able to go back to those days and take those videos again and watching them all terrible and laggy makes me so miserable",
+    "Since the new update I am facing difficulties with the sticker feature. When I try and add stickers to my Snapchat, they are not appearing in the sticker drawer section. I am also having difficulty with searching for any specific names or content, it takes a really long time to load or it doesn't load at all. I have checked all settings and everything is fine and I have deleted the app and reinstalled it and still not working so It's very frustrating for me and would like for this to be sorted",
     "It's a little bit unfair that android users don't get a chance to set their chats to dark theme. You know, one thing I absolutely hate about this app is that AI. The fact that we can't unfriend it. It barely gives me correct answers and just keeps repeating its answers... I have updated the app so many times, but I still don't get the features I updated it for. Honestly, I might uninstall this app. When I updated the app, I wasn't able to save stories in chat anymore. The app is getting worse.",
     "Latest version sometimes glitches with camera on pixel 7 pro after being open for a long time and jumping in and out of different apps prior to returning to snap. Camera becomes stretched and takes weird photos that are shown skewed to other people and isn't just displaying incorrectly During this oddity, using bultin camera app on phone, poses no issues",
     "Snapchat on Android is a disappointment. The app is buggy, crashes frequently, and the camera quality is terrible. It lags during snaps, making the experience frustrating. Updates seem to make it worse, not better. Overall, it is a subpar and frustrating social media platform. Update... App continues to get worse with bugs and even more things that many users dislike, such as the new bitmojis.",
@@ -311,7 +384,7 @@ for review, label in zip(new_reviews, predicted_labels):
 # Print the list of actionable reviews
 print("\nList of Actionable Reviews:")
 for idx, review in enumerate(actionable_reviews_list, 1):
-    print(f"{idx}. {review}\n")
+    print(f"{idx}. {review},\n")
 
 # Output the number of actionable reviews
 print(f"Number of Actionable Reviews: {num_actionable_reviews} out of {len(new_reviews)}")

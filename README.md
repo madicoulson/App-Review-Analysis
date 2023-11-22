@@ -8,6 +8,7 @@
 #### used Google play instead of app store, pulled 100 reviews and stored in Python list
 
 ### Step 3. Run the SVM on the set of Snapchat reviews and create a list of those that are actionable. 
+### found 33 out of the 100 were actionable items
 
 ### Step 4. Develop seperate SVM models for reviews that correspond with the following issues: speed, crashes, UI/UX, security
 
