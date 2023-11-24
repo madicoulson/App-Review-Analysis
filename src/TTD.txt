@@ -1,5 +1,2 @@
-1. make speed data more accurate, add more reviews
-2. add at least 100 more reviews for crash SVM
-3. Fix printing number of crash reviews in crash SVM
-4. Implement UI/UX SVM
-5. Implement security SVM
+1. add more reviews to speed data- need at least 10 more, maybe change data to make snap predictions more accurate
+2. add 110 more reviews to crash SVM so it hits 200

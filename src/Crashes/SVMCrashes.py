@@ -4,7 +4,7 @@ from sklearn.feature_extraction.text import TfidfVectorizer
 from sklearn.svm import SVC
 from sklearn.metrics import classification_report, accuracy_score
 
-# Sample list of app store reviews and their corresponding labels (0 for not related to speed, 1 for related to speed)
+# Sample list of app store reviews and their corresponding labels (0 for not related to crashes, 1 for related to crashes)
 reviews = [
     "This app is amazing. I love it!",
     "The app crashes frequently and is very frustrating.",
@@ -130,7 +130,7 @@ labels = [0, 1, 0, 0, 0, 0, 0, 0, 0, 0,
           1, 1, 1, 1, 1, 1, 1, 1, 1, 1]
 
 # Convert text data to TF-IDF features
-tfidf_vectorizer = TfidfVectorizer(max_features=10000)  # You can adjust the number of features
+tfidf_vectorizer = TfidfVectorizer(max_features=10000) 
 X = tfidf_vectorizer.fit_transform(reviews)
 
 # Create and train the SVM model
@@ -195,7 +195,7 @@ new_reviews = [
     "The app frequently crashes, especially when multitasking. Address this issue for better stability."
 ]
 
-# Different labels for new reviews (adjust as needed)
+# Different labels for new reviews
 new_reviews_labels = [0, 0, 0, 1, 0, 0, 0, 0, 0, 0,
                       1, 0, 0, 0, 0, 0, 0, 0, 0, 0,
                       1, 1, 1, 1, 1, 1, 1, 1, 1, 1,
@@ -208,10 +208,6 @@ new_reviews_tfidf = tfidf_vectorizer.transform(new_reviews)
 # Predict labels for new reviews
 predicted_labels = svm_classifier.predict(new_reviews_tfidf)
 
-# Interpret the predictions
-crash_labels = {0: 'Not Related to Crashes', 1: 'Related to Crashes'}
-predicted_labels = [crash_labels[pred] for pred in predicted_labels]
-
 # Display the predictions
 for review, label in zip(new_reviews, predicted_labels):
     print(f"Review: {review}\nPredicted Label: {label}\n")
@@ -222,16 +218,18 @@ predicted_labels = svm_classifier.predict(new_reviews_tfidf)
 # Calculate accuracy
 accuracy = accuracy_score(new_reviews_labels, predicted_labels)
 
-# Display the predictions and count the number of actionable reviews
+# Interpret the predictions
+crash_labels = {0: 'Not Related to Crashes', 1: 'Related to Crashes'}
+predicted_labels = [crash_labels[pred] for pred in predicted_labels]
+
+# Display the predictions and count the number of crash reviews
 num_crash_reviews = 0
 for review, label in zip(new_reviews, predicted_labels):
     print(f"Review: {review}\nPredicted Label: {label}\n")
-    
-    # This is not working - not sure why need to investigate.
     if label == 'Related to Crashes':
         num_crash_reviews += 1
 
-# Output the number of actionable reviews
-print(f"Number of Actionable Reviews: {num_crash_reviews} out of {len(new_reviews)}")
+# Output the number of crash reviews
+print(f"Number of Crash Reviews: {num_crash_reviews} out of {len(new_reviews)}")
 
 print(f"Accuracy: {accuracy * 100:.2f}%")
