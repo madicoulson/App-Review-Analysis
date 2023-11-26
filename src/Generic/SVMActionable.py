@@ -1,8 +1,7 @@
-# Import necessary libraries
-import numpy as np
+# Necessary scikit-learn modules for SVM implementation
 from sklearn.feature_extraction.text import TfidfVectorizer
 from sklearn.svm import SVC
-from sklearn.metrics import classification_report, accuracy_score
+from sklearn.metrics import accuracy_score
 
 # Sample list of app store reviews and their corresponding labels (0 for not actionable, 1 for actionable)
 reviews = [
