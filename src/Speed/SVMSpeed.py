@@ -214,8 +214,18 @@ reviews = [
     "This app is a must-have. It has everything I need for my daily tasks.",
     "The app takes too long to load. Optimize the speed for better user experience.",
     "I appreciate the regular updates. Keep up the good work!",
-    "The app crashes on startup. This issue needs immediate attention."
+    "The app crashes on startup. This issue needs immediate attention.",
     
+    "The app crashes frequently and is very frustrating.",
+    "The speed of this app is awesome!",
+    "The speed of this app is way too slow.",
+    "The app frequently loses data. Implement a reliable auto-save feature to prevent data loss.",
+    "The app takes too long to load. Optimize the speed for better user experience.",
+    "The latest update improved the app's performance significantly. Great job!",
+    "The app frequently crashes, making it frustrating to use. Please fix this issue.",
+    "The latest update made the app slower on my device. Improve the performance.",
+    "The app is reliable, and I've had no issues with it so far.",
+    "The app's design is outdated. It needs a modern and fresh look."   
 ]
 
 # Labels (0 for not related to speed, 1 for related to speed)
@@ -237,7 +247,8 @@ labels = [0, 1, 1, 0, 1, 0, 0, 1, 0, 0,
           0, 0, 0, 1, 1, 0, 0, 0, 0, 0,
           0, 0, 0, 0, 1, 0, 0, 0, 1, 0,
           0, 0, 0, 0, 0, 0, 0, 0, 1, 0,
-          0, 0, 0, 0, 0, 0, 0, 1, 0, 0]
+          0, 0, 0, 0, 0, 0, 0, 1, 0, 0,
+          0, 1, 1, 0, 1, 0, 0, 1, 0, 0]
 
 # Convert text data to TF-IDF features
 tfidf_vectorizer = TfidfVectorizer(max_features=10000)
@@ -302,7 +313,62 @@ new_reviews = [
     "I encountered a security vulnerability in the latest version of the app.",
     "The app's design is outdated and needs a modern refresh.",
     "Great app overall, but it could benefit from a dark mode.",
-    "I use this app every day and haven't faced any issues so far."
+    "I use this app every day and haven't faced any issues so far.",
+    
+    "The app constantly crashes. Fix this issue immediately!",
+    "I love the new design, but the speed could be improved.",
+    "Great app, but it would be better with a dark mode option.",
+    "The app's performance is excellent. No issues so far.",
+    "The UI is confusing. Consider simplifying the design.",
+    "This app is perfect for my needs. No complaints!",
+    "I wish there were more filters available. Consider adding new ones.",
+    "The speed is impressive, but the UI needs a refresh.",
+    "The app frequently loses data. Implement an auto-save feature.",
+    "I regret purchasing this app. It doesn't meet my expectations.",
+    
+    "The latest update made the app slower. Please optimize the performance.",
+    "Decent app, but it could use some additional features.",
+    "The design is outdated. Consider a more modern look.",
+    "The app's speed is a bit slow. Could use some optimization.",
+    "The UI is user-friendly. Great job on the design!",
+    "I like the simple design, but the app crashes too often.",
+    "The latest update improved performance significantly. Good work!",
+    "The app's design is sleek. I appreciate the modern look.",
+    "I use this app daily, and it works very well for me.",
+    "This app is amazing. I love the speed and design!",
+    
+    "The app crashes occasionally. Please address this issue.",
+    "The UI is clunky. It needs a more intuitive interface.",
+    "I regret purchasing this app. It's not worth the money.",
+    "The speed is impressive, but the design needs improvement.",
+    "The app's design is fantastic. Very modern and fresh.",
+    "The app takes too long to load. Optimize the speed.",
+    "The latest update made the app more reliable. Thank you!",
+    "This app is perfect for my needs. No complaints at all.",
+    "The UI is outdated. Consider a more modern design.",
+    "The app crashes frequently. This needs urgent attention.",
+    
+    "I love the simple design. No issues with speed.",
+    "The app's performance is inconsistent. Needs improvement.",
+    "Decent app, but it lacks some essential features.",
+    "The design is sleek and modern. Great user experience!",
+    "The app crashes occasionally. Please fix this issue.",
+    "I wish the app had a dark mode. Consider adding it.",
+    "The speed is impressive, but the UI needs refinement.",
+    "The latest update improved the app's reliability. Good job!",
+    "The app takes too long to load. Optimize the speed.",
+    "The design is outdated. Consider a more modern look.",
+    
+    "The speed is impressive, but the app crashes too often.",
+    "I regret purchasing this app. It's not worth the money.",
+    "The app's design is fantastic. Very modern and fresh.",
+    "The app crashes occasionally. Please address this issue.",
+    "The UI is clunky. It needs a more intuitive interface.",
+    "This app is amazing. I love the speed and design!",
+    "The latest update made the app more reliable. Thank you!",
+    "The app's design is sleek. I appreciate the modern look.",
+    "I use this app daily, and it works very well for me.",
+    "The UI is user-friendly. Great job on the design!"
 ]
 
 # Different labels for new reviews
@@ -310,7 +376,12 @@ new_reviews_labels = [1, 1, 0, 0, 0, 1, 1, 1, 1, 1,
                       1, 1, 1, 1, 1, 1, 1, 1, 1, 1,
                       0, 0, 0, 1, 0, 0, 1, 0, 0, 0,
                       0, 0, 0, 0, 0, 1, 0, 0, 1, 0,
-                      0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+                      0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+                      0, 1, 0, 0, 0, 0, 0, 1, 0, 0,
+                      1, 0, 0, 1, 0, 0, 0, 0, 0, 1,
+                      0, 0, 0, 1, 0, 1, 0, 0, 0, 0,
+                      1, 0, 0, 0, 0, 0, 1, 0, 1, 0,
+                      1, 0, 0, 0, 0, 1, 0, 0, 0, 0]
 
 # Convert new review text to TF-IDF features
 new_reviews_tfidf = tfidf_vectorizer.transform(new_reviews)

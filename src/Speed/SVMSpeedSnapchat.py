@@ -214,8 +214,18 @@ reviews = [
     "This app is a must-have. It has everything I need for my daily tasks.",
     "The app takes too long to load. Optimize the speed for better user experience.",
     "I appreciate the regular updates. Keep up the good work!",
-    "The app crashes on startup. This issue needs immediate attention."
+    "The app crashes on startup. This issue needs immediate attention.",
     
+    "The app crashes frequently and is very frustrating.",
+    "The speed of this app is awesome!",
+    "The speed of this app is way too slow.",
+    "The app frequently loses data. Implement a reliable auto-save feature to prevent data loss.",
+    "The app takes too long to load. Optimize the speed for better user experience.",
+    "The latest update improved the app's performance significantly. Great job!",
+    "The app frequently crashes, making it frustrating to use. Please fix this issue.",
+    "The latest update made the app slower on my device. Improve the performance.",
+    "The app is reliable, and I've had no issues with it so far.",
+    "The app's design is outdated. It needs a modern and fresh look."   
 ]
 
 # Labels (0 for not related to speed, 1 for related to speed)
@@ -237,7 +247,8 @@ labels = [0, 1, 1, 0, 1, 0, 0, 1, 0, 0,
           0, 0, 0, 1, 1, 0, 0, 0, 0, 0,
           0, 0, 0, 0, 1, 0, 0, 0, 1, 0,
           0, 0, 0, 0, 0, 0, 0, 0, 1, 0,
-          0, 0, 0, 0, 0, 0, 0, 1, 0, 0]
+          0, 0, 0, 0, 0, 0, 0, 1, 0, 0,
+          0, 1, 1, 0, 1, 0, 0, 1, 0, 0]
 
 # Convert text data to TF-IDF features
 tfidf_vectorizer = TfidfVectorizer(max_features=10000)

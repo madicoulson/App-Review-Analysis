@@ -215,16 +215,17 @@ reviews = [
     "The app's design is clean and modern. It stands out among other similar applications.",
     "The app crashes on startup, making it frustrating to use. Immediate attention is needed.",
     
-    "The light mode is clean and simple, but the dark mode feels cluttered. Streamline the design.",
-    "Switching between light and dark modes is seamless, enhancing the app's overall accessibility.",
-    "The light mode feels modern and sleek, while the dark mode lacks refinement. Balance is needed.",
-    "I enjoy using the app in both light and dark modes. It caters to different preferences.",
-    "The functions of this app are very user friendly!",
-    "The light mode is user-friendly, but the dark mode needs better readability. Improve contrast.",
-    "Both light and dark modes are well-integrated, offering users a personalized experience.",
-    "The dark mode is perfect for nighttime use, providing a comfortable viewing experience.",
-    "I appreciate the effort in providing both light and dark modes, catering to diverse user preferences.",
-    "The user interface on this app is great!"      
+    "I love the variety of filters available. It adds so much fun to my photos!",
+    "The new filters in the latest update are fantastic. Great job!",
+    "Filters are limited. Consider adding more options for users.",
+    "The app crashes when applying certain filters. Fix this issue!",
+    "The vintage filters are my favorite. Keep adding unique ones!",
+    "Filters make my photos look amazing. No complaints so far.",
+    "The app freezes when using the augmented reality filters. Annoying bug.",
+    "The black and white filters need improvement. They look too dull.",
+    "Filters are a bit overwhelming. It would be nice to have a simpler selection.",
+    "I wish there were more creative filters. Current options are a bit plain.",
+    
 ]
 
 labels = [0, 0, 0, 0, 0, 0, 1, 0, 0, 0,
@@ -312,7 +313,62 @@ new_reviews = [
     "The dark mode is sleek and modern, while the light mode lacks the same level of refinement.",
     "Switching between light and dark modes is seamless, enhancing the app's usability.",
     "The light mode is user-friendly, but the dark mode needs some adjustments for better readability.",
-    "Both light and dark modes contribute to a positive user experience, providing versatility."
+    "Both light and dark modes contribute to a positive user experience, providing versatility.",
+    
+    "The app constantly crashes. Fix this issue immediately!",
+    "I love the new design, but the speed could be improved.",
+    "Great app, but it would be better with a dark mode option.",
+    "The app's performance is excellent. No issues so far.",
+    "The UI is confusing. Consider simplifying the design.",
+    "This app is perfect for my needs. No complaints!",
+    "I wish there were more filters available. Consider adding new ones.",
+    "The speed is impressive, but the UI needs a refresh.",
+    "The app frequently loses data. Implement an auto-save feature.",
+    "I regret purchasing this app. It doesn't meet my expectations.",
+    
+    "The latest update made the app slower. Please optimize the performance.",
+    "Decent app, but it could use some additional features.",
+    "The design is outdated. Consider a more modern look.",
+    "The app's speed is a bit slow. Could use some optimization.",
+    "The UI is user-friendly. Great job on the design!",
+    "I like the simple design, but the app crashes too often.",
+    "The latest update improved performance significantly. Good work!",
+    "The app's design is sleek. I appreciate the modern look.",
+    "I use this app daily, and it works very well for me.",
+    "This app is amazing. I love the speed and design!",
+    
+    "The app crashes occasionally. Please address this issue.",
+    "The UI is clunky. It needs a more intuitive interface.",
+    "I regret purchasing this app. It's not worth the money.",
+    "The speed is impressive, but the design needs improvement.",
+    "The app's design is fantastic. Very modern and fresh.",
+    "The app takes too long to load. Optimize the speed.",
+    "The latest update made the app more reliable. Thank you!",
+    "This app is perfect for my needs. No complaints at all.",
+    "The UI is outdated. Consider a more modern design.",
+    "The app crashes frequently. This needs urgent attention.",
+    
+    "I love the simple design. No issues with speed.",
+    "The app's performance is inconsistent. Needs improvement.",
+    "Decent app, but it lacks some essential features.",
+    "The design is sleek and modern. Great user experience!",
+    "The app crashes occasionally. Please fix this issue.",
+    "I wish the app had a dark mode. Consider adding it.",
+    "The speed is impressive, but the UI needs refinement.",
+    "The latest update improved the app's reliability. Good job!",
+    "The app takes too long to load. Optimize the speed.",
+    "The design is outdated. Consider a more modern look.",
+    
+    "The speed is impressive, but the app crashes too often.",
+    "I regret purchasing this app. It's not worth the money.",
+    "The app's design is fantastic. Very modern and fresh.",
+    "The app crashes occasionally. Please address this issue.",
+    "The UI is clunky. It needs a more intuitive interface.",
+    "This app is amazing. I love the speed and design!",
+    "The latest update made the app more reliable. Thank you!",
+    "The app's design is sleek. I appreciate the modern look.",
+    "I use this app daily, and it works very well for me.",
+    "The UI is user-friendly. Great job on the design!",
 ]
 
 # Different labels for new reviews
@@ -320,7 +376,12 @@ new_reviews_labels = [0, 0, 1, 0, 0, 1, 0, 1, 1, 0,
                       1, 1, 1, 1, 1, 1, 1, 1, 1, 1,
                       0, 0, 1, 0, 0, 0, 0, 0, 0, 0,
                       0, 1, 0, 0, 0, 0, 1, 0, 0, 0,
-                      0, 0, 0, 0, 0, 1, 1, 1, 1, 1]
+                      0, 0, 0, 0, 0, 1, 1, 1, 1, 1,
+                      0, 1, 1, 0, 1, 0, 1, 0, 0, 0,
+                      0, 0, 1, 0, 1, 1, 0, 1, 0, 1,
+                      0, 1, 0, 0, 1, 0, 0, 0, 1, 0,
+                      1, 0, 0, 1, 0, 1, 1, 0, 0, 1,
+                      0, 0, 1, 0, 1, 1, 0, 1, 0, 1]
 
 # Convert new review text to TF-IDF features
 new_reviews_tfidf = tfidf_vectorizer.transform(new_reviews)

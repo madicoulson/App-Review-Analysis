@@ -1,6 +1,8 @@
-# Support Vector Machine Algorithm Utilized to Classify Snapchat App Store Reviews as Actionable or Non-Actionable, and Further to Action Type
+## Support Vector Machine Algorithm Utilized to Classify Snapchat App Store Reviews as Actionable or Non-Actionable, and Further to Action Type
 
-## The steps of this project, which each will be described in greater detail, are as follows:
+# The steps of this project, which each will be described in greater detail, are as follows:
+1. Develop
+
 ### Step 1. Develop a SVM with over 90% accuracy to test Snapchat app store data.
 #### researched model libraries, created model based upon ChatGPT, manually wrote and had ChatGPT auto generate sample data, got it up to 98% accuracy
 

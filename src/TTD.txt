@@ -1,2 +1,0 @@
-1. add more reviews to speed data- need at least 10 more, maybe change data to make snap predictions more accurate
-2. add 110 more reviews to crash SVM so it hits 200

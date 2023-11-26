@@ -215,16 +215,16 @@ reviews = [
     "The app's design is clean and modern. It stands out among other similar applications.",
     "The app crashes on startup, making it frustrating to use. Immediate attention is needed.",
     
-    "The light mode is clean and simple, but the dark mode feels cluttered. Streamline the design.",
-    "Switching between light and dark modes is seamless, enhancing the app's overall accessibility.",
-    "The light mode feels modern and sleek, while the dark mode lacks refinement. Balance is needed.",
-    "I enjoy using the app in both light and dark modes. It caters to different preferences.",
-    "The functions of this app are very user friendly!",
-    "The light mode is user-friendly, but the dark mode needs better readability. Improve contrast.",
-    "Both light and dark modes are well-integrated, offering users a personalized experience.",
-    "The dark mode is perfect for nighttime use, providing a comfortable viewing experience.",
-    "I appreciate the effort in providing both light and dark modes, catering to diverse user preferences.",
-    "The user interface on this app is great!"      
+    "I love the variety of filters available. It adds so much fun to my photos!",
+    "The new filters in the latest update are fantastic. Great job!",
+    "Filters are limited. Consider adding more options for users.",
+    "The app crashes when applying certain filters. Fix this issue!",
+    "The vintage filters are my favorite. Keep adding unique ones!",
+    "Filters make my photos look amazing. No complaints so far.",
+    "The app freezes when using the augmented reality filters. Annoying bug.",
+    "The black and white filters need improvement. They look too dull.",
+    "Filters are a bit overwhelming. It would be nice to have a simpler selection.",
+    "I wish there were more creative filters. Current options are a bit plain.",   
 ]
 
 labels = [0, 0, 0, 0, 0, 0, 1, 0, 0, 0,
