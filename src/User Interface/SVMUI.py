@@ -731,7 +731,7 @@ new_reviews = [
     "The UI is user-friendly. Great job on the design!",
 ]
 
-# Different labels for new reviews
+# Labels for new reviews
 new_reviews_labels = [0, 0, 1, 0, 0, 1, 0, 1, 1, 0,
                       1, 1, 1, 1, 1, 1, 1, 1, 1, 1,
                       0, 0, 1, 0, 0, 0, 0, 0, 0, 0,
@@ -745,13 +745,6 @@ new_reviews_labels = [0, 0, 1, 0, 0, 1, 0, 1, 1, 0,
 
 # Convert new review text to TF-IDF features
 new_reviews_tfidf = tfidf_vectorizer.transform(new_reviews)
-
-# Predict labels for new reviews
-predicted_labels = svm_classifier.predict(new_reviews_tfidf)
-
-# Display the predictions
-for review, label in zip(new_reviews, predicted_labels):
-    print(f"Review: {review}\nPredicted Label: {label}\n")
     
 # Predict labels for new reviews
 predicted_labels = svm_classifier.predict(new_reviews_tfidf)
@@ -773,4 +766,5 @@ for review, label in zip(new_reviews, predicted_labels):
 # Output the number of UI reviews
 print(f"Number of UI Reviews: {num_UI_reviews} out of {len(new_reviews)}")
 
+# Output the accuracy of the SVM
 print(f"Accuracy: {accuracy * 100:.2f}%")

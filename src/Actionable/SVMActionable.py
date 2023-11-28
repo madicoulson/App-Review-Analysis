@@ -225,8 +225,6 @@ reviews = [
     "The app's design is outdated. It needs a modern and fresh look.",
     "This app is great. I love the features!",
     
-    # NEW APP REVIEWS START HERE
-    
     "The app is amazing! Love the new features.",
     "Constant crashes. Needs urgent fixing.",
     "Great app overall, but a dark mode would be nice.",
@@ -611,7 +609,7 @@ labels = [0, 1, 1, 0, 0, 0, 1, 1, 1, 0,
           0, 0, 1, 0, 1, 0, 1, 0, 1, 0]  
 
 # Convert text data to TF-IDF features
-tfidf_vectorizer = TfidfVectorizer(max_features=10000)  # You can adjust the number of features
+tfidf_vectorizer = TfidfVectorizer(max_features=10000)
 X = tfidf_vectorizer.fit_transform(reviews)
 
 # Create and train the SVM model
@@ -731,7 +729,7 @@ new_reviews = [
     "The UI is user-friendly. Great job on the design!",   
 ]
 
-# Different labels for new reviews
+# Labels for new reviews
 new_reviews_labels = [0, 0, 1, 1, 0, 1, 1, 1, 1, 0, 
                       0, 0, 0, 1, 0, 1, 0, 1, 0, 1,
                       1, 1, 0, 1, 1, 1, 0, 1, 0, 0,
@@ -746,17 +744,6 @@ new_reviews_labels = [0, 0, 1, 1, 0, 1, 1, 1, 1, 0,
 
 # Convert new review text to TF-IDF features
 new_reviews_tfidf = tfidf_vectorizer.transform(new_reviews)
-
-# Predict labels for new reviews
-predicted_labels = svm_classifier.predict(new_reviews_tfidf)
-
-# Interpret the predictions
-actionable_labels = {0: 'Not Actionable', 1: 'Actionable'}
-predicted_labels = [actionable_labels[pred] for pred in predicted_labels]
-
-# Display the predictions
-for review, label in zip(new_reviews, predicted_labels):
-    print(f"Review: {review}\nPredicted Label: {label}\n")
 
 # Predict labels for new reviews
 predicted_labels = svm_classifier.predict(new_reviews_tfidf)
@@ -778,4 +765,5 @@ for review, label in zip(new_reviews, predicted_labels):
 # Output the number of actionable reviews
 print(f"Number of Actionable Reviews: {num_actionable_reviews} out of {len(new_reviews)}")
 
+# Output the accuracy of the SVM
 print(f"Accuracy: {accuracy * 100:.2f}%")

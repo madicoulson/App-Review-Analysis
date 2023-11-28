@@ -609,7 +609,7 @@ labels = [0, 1, 1, 0, 0, 0, 1, 1, 1, 0,
           0, 0, 1, 0, 1, 0, 1, 0, 1, 0]   
 
 # Convert text data to TF-IDF features
-tfidf_vectorizer = TfidfVectorizer(max_features=10000)  # You can adjust the number of features
+tfidf_vectorizer = TfidfVectorizer(max_features=10000)
 X = tfidf_vectorizer.fit_transform(reviews)
 
 # Create and train the SVM model
@@ -739,7 +739,6 @@ predicted_labels = svm_classifier.predict(new_reviews_tfidf)
 # Interpret the predictions
 actionable_labels = {0: 'Not Actionable', 1: 'Actionable'}
 predicted_labels = [actionable_labels[pred] for pred in predicted_labels]
-# ... (previous code remains unchanged)
 
 # Initialize a list to store actionable reviews
 actionable_reviews_list = []

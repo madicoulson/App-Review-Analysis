@@ -731,7 +731,7 @@ new_reviews = [
     "The UI is user-friendly. Great job on the design!"
 ]
 
-# Different labels for new reviews
+# Labels for new reviews
 new_reviews_labels = [1, 1, 0, 0, 0, 1, 1, 1, 1, 1,
                       1, 1, 1, 1, 1, 1, 1, 1, 1, 1,
                       0, 0, 0, 1, 0, 0, 1, 0, 0, 0,
@@ -766,4 +766,5 @@ for review, label in zip(new_reviews, predicted_labels):
 # Output the number of speed reviews
 print(f"Number of Speed Reviews: {num_speed_reviews} out of {len(new_reviews)}")
 
+# Output the accuracy of the SVM
 print(f"Accuracy: {accuracy * 100:.2f}%")

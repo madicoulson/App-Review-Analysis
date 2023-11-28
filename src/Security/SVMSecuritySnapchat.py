@@ -556,7 +556,6 @@ reviews = [
     "Streamlined design enhances user experience. Thumbs up!"               
 ]
 
-
 labels = [0, 0, 0, 0, 0, 0, 0, 1, 0, 0,
           0, 0, 0, 1, 0, 0, 0, 0, 0, 0,
           1, 1, 1, 1, 1, 1, 1, 1, 1, 1,
@@ -616,6 +615,7 @@ X = tfidf_vectorizer.fit_transform(reviews)
 svm_classifier = SVC(kernel='linear', C=1, random_state=42)
 svm_classifier.fit(X, labels)
 
+# Actionable Snapchat Reviews to test
 snapchat_reviews = [
     "I loved this app, but ever since the last update the filters don't work. Any filter that alters someone's face, I can take a picture but I can't take video anymore. The audio will come up normally and yet the video is like it's doing a slideshow, each frame holds for 5 seconds before switching to the next. Most of the app functions normally but filters that alter people's faces just will not work and it's driving me insane. They worked a couple weeks ago so what did you guys do????",
  
