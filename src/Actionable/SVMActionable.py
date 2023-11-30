@@ -2,6 +2,9 @@
 from sklearn.feature_extraction.text import TfidfVectorizer
 from sklearn.svm import SVC
 from sklearn.metrics import accuracy_score
+from sklearn.metrics import precision_score
+from sklearn.metrics import recall_score
+from sklearn.metrics import f1_score
 
 # Sample list of app store reviews and their corresponding labels (0 for not actionable, 1 for actionable)
 reviews = [
@@ -751,6 +754,15 @@ predicted_labels = svm_classifier.predict(new_reviews_tfidf)
 # Calculate accuracy
 accuracy = accuracy_score(new_reviews_labels, predicted_labels)
 
+# Calculate precision
+precision = precision_score(new_reviews_labels, predicted_labels)
+
+# Calculate recall
+recall = recall_score(new_reviews_labels, predicted_labels)
+
+# Calculate F1 score
+f1 = f1_score(new_reviews_labels, predicted_labels)
+
 # Interpret the predictions
 actionable_labels = {0: 'Not Actionable', 1: 'Actionable'}
 predicted_labels = [actionable_labels[pred] for pred in predicted_labels]
@@ -767,3 +779,12 @@ print(f"Number of Actionable Reviews: {num_actionable_reviews} out of {len(new_r
 
 # Output the accuracy of the SVM
 print(f"Accuracy: {accuracy * 100:.2f}%")
+
+# Display precision
+print(f'Precision: {precision}')
+
+# Display recall
+print(f'Recall: {recall}')
+
+# Display F1 score
+print(f'F1 Score: {f1}')
